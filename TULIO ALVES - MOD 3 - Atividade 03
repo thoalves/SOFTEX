@@ -1,0 +1,13 @@
+#CONTAGEM REGRESSIVA DE UMA BOMBA
+
+import time
+i=0
+
+print("Iniciando contagem regressiva:\n")
+
+while (i<10):
+  print(10-i," seg\n")
+  time.sleep(1) # Sleep for 1 seconds
+  i=i+1
+
+print("BUM")

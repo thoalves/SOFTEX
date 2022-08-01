@@ -1,0 +1,26 @@
+/*Crie uma situação em que ocorra uma exceção dentro de um código. Utilize try/catch para realizar a captura e tratamento dessa exceção.
+
+import java.util.Scanner;
+
+public class Exemplo1 {
+    
+    public static void main (String[] args) {
+    Scanner ler = new Scanner(System.in);
+    int a, b;
+    
+    try {
+    
+        System.out.printf("Informe o primeiro valor: ");
+        a = ler.nextInt();
+    
+        System.out.printf("Informe o segundo valor: ");
+        b = ler.nextInt();
+    
+        System.out.printf("%d / %d = %3d (divisão inteira)\n", a, b, (a / b));
+    }
+    catch (Exception Erro_de_divisao_por_zero) { 
+    
+        System.out.printf("O denominador não pode ser zero");
+    }
+}
+}

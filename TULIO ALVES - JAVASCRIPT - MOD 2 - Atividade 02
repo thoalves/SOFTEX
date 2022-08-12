@@ -9,28 +9,34 @@
 
 var resultado, resto
 
-	let num_1 = prompt("Insira o primeiro numero: ");
-	let num_2 = prompt("Insira o segundo numero: ");
-	let operador = prompt("Insira a operação a ser realizada (+, -, /, *): ");
+let num_1 = (prompt("Insira o primeiro numero: "));
+while (isNaN(num_1)) {
+num_1 = parseInt(prompt("Valor digitado não é um número. Insira o primeiro numero: "))
+}
+let num_2 = prompt("Insira o segundo numero: ");
+while (isNaN(num_2)) {
+num_2 = parseInt(prompt("Valor digitado não é um número. Insira o segundo número: "))
+}
+let operador = prompt("Insira a operação a ser realizada (+, -, /, *): ");
 	
-	switch (operador) {
-		case '+': 
-    	resultado = parseInt(num_1) + parseInt(num_2)
+switch (operador) {
+case '+': 
+	resultado = parseInt(num_1) + parseInt(num_2)
     	window. alert('O resultado da soma é ' + resultado)
-  		break
-		case '-': 
+  	break
+case '-': 
     	resultado = parseInt(num_1) - parseInt(num_2)
     	window. alert('O resultado da subtração é ' + resultado)
-  		break
-		case '/': 
-    	resultado = parseInt(num_1) / parseInt(num_2)
-      resto = parseInt(num_1) % parseInt(num_2)
-	  	window. alert('O resultado da divisão é ' + parseInt(resultado) + ' e o resto é ' + resto)
+	break
+case '/': 
+	resultado = parseInt(num_1) / parseInt(num_2)
+      	resto = parseInt(num_1) % parseInt(num_2)
+	window. alert('O resultado da divisão é ' + parseInt(resultado) + ' e o resto é ' + resto)
     	break
-		case '*':
+case '*':
     	resultado = parseInt(num_1) * parseInt(num_2)
-  		window. alert('O resultado da multiplicação é ' + resultado)
+	window. alert('O resultado da multiplicação é ' + resultado)
     	break
-    default:
-    	window. alert('Os dados inseridos estão incorretos')
- }
+default:
+    	window. alert('O operador inserido está incorreto')
+}
